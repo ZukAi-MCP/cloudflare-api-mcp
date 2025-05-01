@@ -1,4 +1,4 @@
-import { WorkerEntrypoint } from "cloudflare:workers"
+import { WorkerEntrypoint } from "cloudflare:workers" 
 import { ProxyToSelf } from "workers-mcp"
 import { purgeEverything } from "./cloudflare/cache"
 import {
