@@ -1,5 +1,5 @@
 {
-	"name": "cloudflare-api-mcp",
+	"name": "cloudflare-api-mcp", 
 	"scripts": {
 		"dev": "bun check && wrangler dev",
 		"deploy": "workers-mcp docgen src/index.ts && bun check && wrangler deploy --minify",
