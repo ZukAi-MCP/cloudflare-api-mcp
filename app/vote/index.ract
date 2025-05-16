@@ -1,0 +1,66 @@
+
+  <div class="vote__form">
+    <form>
+
+      <div class="vote__field">
+        <label class="_label" for="bitcoin">{{translate("Vote")}}</label>
+        <div class="input__container">
+          <input id="tx" class="_input fiat" type="number" min="0" step="any" on-focus="focusAmountInput" on-blur="blurAmountInput">
+          <span class="_currency dropdown">
+            <select value="{{selectedVote}}" tabindex="-1">
+              <option value='-1'>Select unspent output</option>
+              {{#each votes: i}}
+                <option value="{{i}}">{{address}}</option>
+              {{/each}}
+            </select>
+          </span>
+        </div>
+      </div>
+      {{#if selectedVote >= 0}}
+      <div class='vote_info'>
+        <h3>Transaction ID</h3>
+        <code class='break'>{{votes[selectedVote].txid}}</code>
+        <h3>Amount</h3>
+        <code>{{votes[selectedVote].amount}} SMLY</code>
+      </div>
+      {{/if}}
+      <div class="vote__field">
+        <label class="_label" for="to">{{translate("Candidate address")}}</label>
+        <div class="input__container">
+          <input id="to" class="_input" type="text" autocorrect="off" autocapitalize="off" value="{{to}}" />
+        </div>
+      </div>
+
+      <div class='vote_info'>
+        <h3>Attention</h3>
+        {{#if feeUnspents}}
+        <code>Funds from the following address will be used to pay the
+        transaction fee.</code>
+        <h3>Address</h3>
+        <code class='break'>{{feeUnspents[0].address}}</code>
+        <h3>Amount</h3>
+        <code>1 SMLY</code>
+        {{else}}
+        <code>No unspent output found to pay transaction fee. Transfer more funds to
+        the wallet.</code>
+        {{/if}}
+      </div>
+ 
+    </form>
+  </div>
+
+  <p style='margin: 14px 0px;'>Note: After pressing confirm, you can view the history tab to verify that the vote was sent.</p>
+
+  <div class="send__buttons">
+    {{^validating}}
+      <div on-click="open-vote" class="send__btn">{{translate("Confirm")}}</div>
+    {{/validating}}
+    {{#validating}}
+      <div class="send__btn--validating">
+        <span class="_icon">
+          {{>svg_refresh}}
+        </span>
+      </div>
+    {{/validating}}
+  </div>
+

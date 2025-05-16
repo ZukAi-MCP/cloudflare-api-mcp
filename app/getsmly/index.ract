@@ -1,0 +1,146 @@
+<div id="get_smly_options">
+
+  <div class="send__buttons">
+    {{^validatingFaucet}}
+      <div on-click="get-smly-from-faucet" class="send__btn">Press this button to receive free SmileyCoins</div>
+    {{/validatingFaucet}}
+    {{#validatingFaucet}}
+      <div class="send__btn--validating">
+        <span class="_icon">
+          {{>svg_refresh}}
+        </span>
+      </div>
+    {{/validatingFaucet}}
+  </div>
+
+  <h2> Methods to get Smileycoins (SMLY) </h2>
+  
+  <div id="donate_options" class="get_smly_section">
+    <h2> 1. Donating to Education in a Suitcase </h2>
+
+    <div class="patreon_line">
+      <p> The Smiley Charity will happily accept your donations. You may also choose to receive SMLY as a perk for your donation. </p>
+      <br>
+      <p>You can support the Smiley Charity through their <a href="https://www.patreon.com/eias">Patreon page</a>.</p>
+    </div>
+    <br>
+    <div class="get_smly_section_info_text">
+      <p>You can also donate to them using PayPal.</p>
+      <br>
+      <p> Remember to use only small amounts while you are finding your way through this! You will not make money from this transaction, but you will painlessly get some Smileycoins which you can then use to test the waters of electronic currencies.</p>
+      <br>
+      <p> Remember to use only small amounts while you are finding your way through this! You will not make money from this transaction, but you will painlessly get some Smileycoins which you can then use to test the waters of electronic currencies.</p>
+      <br>
+      <h3> Donating via PayPal: </h3>
+      <p> It is <b>opt-IN</b> to recieve the SMLY for donating so you must <b>tick the checkbox</b> to get any SMLY if you donate. </p>
+      <p> If you do, you will get some SMLY for each Euro you donate. </p>
+      <p> Tick the checkbox if you wish to get SMLY in return as a perk, and then click the donate button from PayPal corresponding to the amount you wish to donate and go through the following steps as prompted by the PayPal system. </p>
+      <br>
+      <div id="get_perks_div_container">
+        <div id="get_perks_div">
+          <p><b>Get SMLY as a perk for donating?</b></p>
+          <input id="perks_check" type="checkbox" on-click="perks-check">
+          <p id="get_perks_show">{{get_perks_show ? "Yes" : "No"}}</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="paypal_options">
+	
+      <form id="PP5E" class="paypal_option" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+        <input type="hidden" name="cmd" value="_donations">
+        <input type="hidden" name="business" value="education.in.a.suitcase@gmail.com">
+        <input type="hidden" name="item_name" value="Smileycoins">
+        <input type="hidden" name="return" value="https://wallet.smileyco.in/">
+        <input type="hidden" name="button_subtype" value="services">
+        <input type="hidden" name="currency_code" value="EUR">
+        <input type="hidden" name="amount" value="5.00">
+        <input type="hidden" name="bn" value="PP-BuyNowBF:btn_donateCC_LG.gif:NonHosted">
+        <table>
+          <tr><td><input type="hidden" name="on0" value="other_info"></td></tr>
+          <tr><td><input class="donate_form_info" type="text" name="os0" maxlength="200" value="" readonly="readonly"></td></tr>
+        </table>
+        <p><b>5€</b></p>
+        <input id="donate_form_submit_btn" type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+      </form>
+      
+      <form id="PP5E2" class="paypal_option" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+        <input type="hidden" name="cmd" value="_donations">
+        <input type="hidden" name="business" value="education.in.a.suitcase@gmail.com">
+        <input type="hidden" name="item_name" value="Smileycoins">
+        <input type="hidden" name="return" value="https://wallet.smileyco.in/">
+        <input type="hidden" name="button_subtype" value="services">
+        <input type="hidden" name="currency_code" value="EUR">
+        <input type="hidden" name="amount" value="10.00">
+        <input type="hidden" name="bn" value="PP-BuyNowBF:btn_donateCC_LG.gif:NonHosted">
+        <table>
+          <tr><td><input type="hidden" name="on0" value="other_info"></td></tr>
+          <tr><td><input class="donate_form_info" type="text" name="os0" maxlength="200" value="" readonly="readonly"></td></tr>
+        </table>
+        <p><b>10€</b></p>
+        <input id="donate_form_submit_btn" type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+      </form>
+
+      <form id="PP5E3" class="paypal_option" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+        <input type="hidden" name="cmd" value="_donations">
+        <input type="hidden" name="business" value="education.in.a.suitcase@gmail.com">
+        <input type="hidden" name="item_name" value="Smileycoins">
+        <input type="hidden" name="return" value="https://wallet.smileyco.in/">
+        <input type="hidden" name="button_subtype" value="services">
+        <input type="hidden" name="currency_code" value="EUR">
+        <input type="hidden" name="amount" value="20.00">
+        <input type="hidden" name="bn" value="PP-BuyNowBF:btn_donateCC_LG.gif:NonHosted">
+        <table>
+          <tr><td><input type="hidden" name="on0" value="other_info"></td></tr>
+          <tr><td><input class="donate_form_info" type="text" name="os0" maxlength="200" value="" readonly="readonly"></td></tr>
+        </table>
+        <p><b>20€</b></p>
+        <input id="donate_form_submit_btn" type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+      </form>
+
+      <form id="PP5E4" class="paypal_option" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+        <input type="hidden" name="cmd" value="_donations">
+        <input type="hidden" name="business" value="education.in.a.suitcase@gmail.com">
+        <input type="hidden" name="item_name" value="Smileycoins">
+        <input type="hidden" name="return" value="https://wallet.smileyco.in/">
+        <input type="hidden" name="button_subtype" value="services">
+        <input type="hidden" name="currency_code" value="EUR">
+        <input type="hidden" name="amount" value="50.00">
+        <input type="hidden" name="bn" value="PP-BuyNowBF:btn_donateCC_LG.gif:NonHosted">
+        <table>
+          <tr><td><input type="hidden" name="on0" value="other_info"></td></tr>
+          <tr><td><input class="donate_form_info" type="text" name="os0" maxlength="200" value="" readonly="readonly"></td></tr>
+        </table>
+        <p><b>50€</b></p>
+        <input id="donate_form_submit_btn" type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+      </form>
+    </div>
+
+  </div>
+
+  <div id="tutorweb_options" class="get_smly_section">
+    <div class="get_smly_section_info_text">
+      <h2> 2. Get SMLY by studying in the tutor-web system </h2>
+      <p> The <a href="https://tutor-web.net/">tutor-web system</a> is a completely free and open system of study. You can pick any course or study-unit (tutorial) and study this to your hearts content by reading the available material and (most importantly) answering drill questions. As you increase your grade in those drills, you will get SMLY. Once you have SMLY you can download them into a Smileycoin wallet. </p>
+    </div>
+  </div>
+
+  <div id="exchange_options" class="get_smly_section">
+    <div class="get_smly_section_info_text">
+      <h2> 3. Buy SMLY at a cryptocurrency exchange </h2>
+      <p> Getting into the world of cryptocurrencies is a bit tricky. There are several hurdles to get started using cryptocoins and buying your first SMLY is not quite trivial. </p>
+
+      <p> You will always need to have an account at a cryptocurrency exchange. </p>
+
+      <p> The exchanges at  <a href="https://www.southxchange.com/Market/Book/SMLY/LTC">SouthXchange</a> and <a href="https://p2pb2b.io/">p2pb2b</a> have several "markets", i.e. places which look like a stock market and you can sell one cryptocurrency for another. These exchanges have several SMLY markets. Typically one would buy SMLY for Litecoin (LTC) or Dogecoin (DOGE), but other markets are also available at southXchange. </p>
+
+      <p> Before entering any of these exchanges to buy SMLY, however, you need to convert fiat money (USD, ISK, EUR) to Bitcoin or another cryptocurrency first. This is most commonly done on a national exchange such as <a href="https://isx.is/">isx.is</a> </p>
+
+      <p> Alternatively you can use a broker who handles the entire process, such as <a href="http://balkar.is/">Bálkar Miðlun</a>. </p>
+    </div>
+  </div>
+</div>

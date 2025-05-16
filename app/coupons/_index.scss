@@ -1,0 +1,92 @@
+
+#coupons {
+
+  .green {
+    color: $green;
+  }
+
+  .red {
+    color: $red;
+  }
+}
+
+.coupons {
+ ._title {
+  padding-bottom: 5px;
+
+  @include breakpoint(portrait) {
+    font-size: 20px;
+  }
+ }
+}
+
+.coupons__item {
+  @include clear;
+  @include clickbtn;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: 1px solid darken($grey--light, 10%);
+
+  @include breakpoint(portrait) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  ._business {
+    @include ellipsis();
+    @include media-obj;
+    @extend .jigsaw-light;
+    padding-top: 13px;
+    font-size: 21px;
+
+    @include breakpoint(portrait) {
+      padding-top: 18px;
+      font-size: 26px;
+    }
+  }
+  ._businesscode {
+    @include ellipsis();
+    @include media-obj;
+    @extend .jigsaw-light;
+    padding-top: 13px;
+    font-size: 21px;
+
+    @include breakpoint(portrait) {
+      padding-top: 18px;
+      font-size: 26px;
+    }
+  }
+
+  ._detail {
+    float: right;
+    text-align: right;
+    margin-left: 10px;
+  }
+
+  ._time {
+    display: block;
+    font-size: 14px;
+    margin-top: -5px;
+    color: $grey;
+    @include breakpoint(portrait) {
+      font-size: 16px;
+    }
+  }
+
+}
+
+.coupons__message {
+  padding: 40px;
+  color: $grey;
+  text-align: center;
+
+  ._message {
+    font-size: 24px;
+    line-height: 1.2;
+    @include breakpoint(portrait) {
+      font-size: 32px;
+    }
+  }
+
+}
+

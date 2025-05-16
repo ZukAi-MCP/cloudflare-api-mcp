@@ -1,0 +1,33 @@
+
+<div class="coupons">
+
+  {{#loadingTx}}
+    <div class="coupons__message">
+      <div class="_message">{{translate("Loading coupons...")}}</div>
+    </div>
+  {{/loadingTx}}
+
+  {{#coupons.length}}
+    <h3 class="_title">{{translate("Your coupons")}}</h3>
+  {{/coupons.length}}
+
+  {{#each coupons: index}}
+    <div class="coupons__item" title="{{code}}" data-index="{{index}}">
+      <div class="_detail">
+        {{#isConfirmed(confirmations)}}
+          <span class='_time'>{{formatTimestamp(timestamp)}}</span>
+          <span class='_time'>{{formatConfirmations(confirmations)}}</span>
+        {{/isConfirmed}}
+      </div>
+    <div class="_businesscode"> {{business + ":  " + code}} </div>
+    </div>
+  {{/each}}
+
+  {{^coupons}}
+    {{^loadingTx}}
+      <div class="coupons_message">
+        <div class="_message">{{translate("You do not have any coupons yet")}}</div>
+      </div>
+    {{/loadingTx}}
+  {{/coupons}}
+</div>

@@ -1,0 +1,465 @@
+    .send__address {
+        display: flex;
+        margin-bottom: 20px;
+        .input__container {
+            position: relative;
+            margin-top: 5px;
+        }
+        .close__input {
+            ._icon {
+                .svg-close {
+                    fill: #969594;
+                }
+            }
+        }
+        ._label {
+            @include noselect;
+            cursor: pointer;
+            display: block;
+            flex: 1;
+            margin-right: 10px;
+            @include breakpoint(portrait) {
+                font-size: 20px;
+            }
+        }
+        ._btn {
+            @extend .csbtn;
+            margin-top: 29px;
+            padding: 0;
+            width: 42px;
+            height: 42px;
+            position: relative;
+            @include breakpoint(portrait) {
+                margin-top: 35px;
+                width: 59px;
+                height: 59px;
+            }
+            ._icon {
+                width: 30px;
+                height: 30px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-top: -15px;
+                margin-left: -15px;
+                @include breakpoint(portrait) {
+                    width: 44px;
+                    height: 44px;
+                    margin-top: -22px;
+                    margin-left: -22px;
+                }
+            }
+        }
+        ._btn-qr {
+            margin-right: 10px;
+        }
+        ._input {
+            @extend .generic_box;
+            @extend .jigsaw-light;
+            padding-left: 10px;
+            padding-right: 38px;
+            border-radius: 2px;
+            height: auto;
+            &:active,
+            &:focus {
+                outline: 0;
+                border: 1px solid #999;
+            }
+            @include breakpoint(portrait) {
+                font-size: 26px;
+                border-radius: 3px;
+                padding-right: 58px;
+            }
+        }
+    }
+    
+    .donation__field {
+        position: relative;
+        margin-bottom: 20px;
+        @include breakpoint(portrait) {
+            margin-bottom: 40px;
+        }
+        ._label {
+            @include noselect;
+            cursor: pointer;
+            display: block;
+            @include breakpoint(portrait) {
+                font-size: 20px;
+                margin-top: 40px;
+            }
+        }
+        ._donations {
+            @include noselect;
+            @extend .jigsaw-light;
+            z-index: 500;
+            cursor: pointer;
+            display: block;
+            /*text-align: right;*/
+            font-size: 18px;
+            right: 10px;
+            top: 11px;
+            /*opacity: 0.4;*/
+            @include breakpoint(portrait) {
+                top: 14px;
+            }
+            select {
+                @extend .generic_box;
+                @extend .jigsaw-light;
+                padding-left: 10px;
+                padding-right: 38px;
+                border-radius: 2px;
+                height: auto;
+                margin-top: 5px;
+                &:active,
+                &:focus {
+                    outline: 0;
+                    border: 1px solid #999;
+                }
+                @include breakpoint(portrait) {
+                    opacity: 0.4;
+                    font-size: 26px;
+                    border-radius: 3px;
+                    padding-right: 58px;
+                }
+                &:focus {
+                    outline: 0;
+                    border: 1px solid #999;
+                }
+                @include breakpoint(portrait) {
+                    font-size: 24px;
+                }
+            }
+            &.dropdown {
+                top: 5px;
+                right: 3px;
+                @include breakpoint(portrait) {
+                    top: 7px;
+                }
+            }
+            @include breakpoint(portrait) {
+                font-size: 24px;
+            }
+        }
+        .donation__info {
+            .info {
+                position: absolute;
+                top: 50%;
+                right: 66px;
+                font-size: 20px;
+                @include breakpoint(portrait) {
+                    width: 44px;
+                    height: 90px;
+                    margin-top: 22px;
+                    margin-left: 22px;
+                }
+            }
+        }
+    }
+
+    .coupon__field {
+        position: relative;
+        margin-bottom: 20px;
+        @include breakpoint(portrait) {
+            margin-bottom: 40px;
+        }
+        ._label {
+            @include noselect;
+            cursor: pointer;
+            display: block;
+            @include breakpoint(portrait) {
+                font-size: 20px;
+                margin-top: 40px;
+            }
+        }
+        ._coupons {
+            @include noselect;
+            @extend .jigsaw-light;
+            z-index: 500;
+            cursor: pointer;
+            display: block;
+            /*text-align: right;*/
+            font-size: 18px;
+            right: 10px;
+            top: 11px;
+            /*opacity: 0.4;*/
+            @include breakpoint(portrait) {
+                top: 14px;
+            }
+            select {
+                @extend .generic_box;
+                @extend .jigsaw-light;
+                padding-left: 10px;
+                padding-right: 38px;
+                border-radius: 2px;
+                height: auto;
+                margin-top: 5px;
+                &:active,
+                &:focus {
+                    outline: 0;
+                    border: 1px solid #999;
+                }
+                @include breakpoint(portrait) {
+                    opacity: 0.4;
+                    font-size: 26px;
+                    border-radius: 3px;
+                    padding-right: 58px;
+                }
+                &:focus {
+                    outline: 0;
+                    border: 1px solid #999;
+                }
+                @include breakpoint(portrait) {
+                    font-size: 24px;
+                }
+            }
+            &.dropdown {
+                top: 5px;
+                right: 3px;
+                @include breakpoint(portrait) {
+                    top: 7px;
+                }
+            }
+            @include breakpoint(portrait) {
+                font-size: 24px;
+            }
+        }
+    }
+    
+    .send__amount {
+        position: relative;
+        margin-bottom: 20px;
+        @include breakpoint(portrait) {
+            margin-bottom: 40px;
+        }
+        ._label {
+            @include noselect;
+            cursor: pointer;
+            display: block;
+            @include breakpoint(portrait) {
+                font-size: 20px;
+                margin-top: 40px;
+            }
+        }
+        ._currency {
+            @include noselect;
+            @extend .jigsaw-light;
+            position: absolute;
+            z-index: 500;
+            cursor: pointer;
+            display: block;
+            text-align: right;
+            font-size: 18px;
+            right: 10px;
+            top: 11px;
+            opacity: 0.4;
+            @include breakpoint(portrait) {
+                top: 14px;
+            }
+            select {
+                @extend .jigsaw-light;
+                font-size: 18px;
+                border: none;
+                background-color: transparent;
+                &:focus {
+                    outline: none;
+                }
+                @include breakpoint(portrait) {
+                    font-size: 24px;
+                }
+            }
+            &.dropdown {
+                top: 5px;
+                right: 3px;
+                @include breakpoint(portrait) {
+                    top: 7px;
+                }
+            }
+            @include breakpoint(portrait) {
+                font-size: 24px;
+            }
+        }
+        ._currency--error {
+            @include noselect;
+            @extend .jigsaw-light;
+            position: absolute;
+            z-index: 500;
+            cursor: pointer;
+            display: block;
+            text-align: right;
+            font-size: 18px;
+            right: 10px;
+            top: 9px;
+            opacity: 0.4;
+            select {
+                @extend .jigsaw-light;
+                padding-right: 20px;
+                font-size: 18px;
+                border: none;
+                background-color: transparent;
+                &:focus {
+                    outline: none;
+                }
+            }
+            &.dropdown {
+                top: 4px;
+                right: 3px;
+            }
+        }
+        ._input {
+            @extend .generic_box;
+            @extend .jigsaw-light;
+            padding-left: 10px;
+            padding-right: 50px;
+            height: auto;
+            margin: 0;
+            border-radius: 0;
+            border-top-right-radius: 2px;
+            border-top-left-radius: 2px;
+            position: relative;
+            z-index: 200;
+            &:active,
+            &:focus {
+                outline: 0;
+                border: 1px solid #999;
+            }
+            &.fiat {
+                padding-right: 70px;
+            }
+            @include breakpoint(portrait) {
+                font-size: 26px;
+                border-radius: 3px;
+                padding-right: 60px;
+                &.fiat {
+                    padding-right: 90px;
+                }
+            }
+        }
+        ._error {
+            background-color: lighten(red, 40%);
+            border: 1px solid red;
+        }
+
+        // hide spin button
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type=number] {
+            -moz-appearance:textfield;
+        }
+    }
+    
+    .send__gas-limit {
+        position: relative;
+        margin-bottom: 20px;
+        @include breakpoint(portrait) {
+            margin-bottom: 40px;
+        }
+        ._label {
+            @include noselect;
+            cursor: pointer;
+            display: block;
+            @include breakpoint(portrait) {
+                font-size: 20px;
+            }
+        }
+        ._input {
+            @extend .generic_box;
+            @extend .jigsaw-light;
+            padding-left: 10px;
+            padding-right: 38px;
+            border-radius: 2px;
+            height: auto;
+            &:active,
+            &:focus {
+                outline: 0;
+                border: 1px solid #999;
+            }
+            @include breakpoint(portrait) {
+                font-size: 26px;
+                border-radius: 3px;
+                padding-right: 58px;
+            }
+        }
+        ._help {
+            @include clickbtn;
+            position: absolute;
+            top: 0;
+            right: -5px;
+            font-size: 12px;
+            text-align: center;
+            width: 26px;
+            height: 26px;
+            padding: 4px;
+            opacity: 0.4;
+            @include breakpoint(portrait) {
+                width: 32px;
+                height: 32px;
+            }
+            &:hover {
+                opacity: 0.7;
+            }
+            .svg-help {
+                fill: #333;
+            }
+        }
+    }
+    
+    ._input-group {
+        position: relative;
+        margin-top: 5px;
+        &+._input-group {
+            margin-top: 0;
+            ._input {
+                margin-top: -1px;
+                border-radius: 2px;
+                border-top-right-radius: 0;
+                border-top-left-radius: 0;
+                z-index: 300;
+                &:focus {
+                    z-index: 300;
+                }
+            }
+        }
+    }
+    
+    .send__btn {
+        @extend .csbtn;
+        @include breakpoint(portrait) {
+            font-size: 26px;
+            border-radius: 3px;
+        }
+    }
+    
+    .send__btn--validating {
+        @extend .csbtn-base;
+        position: relative;
+        background-color: $grey;
+        transform: translate(0px, 3px);
+        box-shadow: 0 0px 0 0;
+        height: 60px;
+        @include breakpoint(portrait) {
+            height: 72px;
+        }
+        ._icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -15px;
+            margin-left: -15px;
+            width: 30px;
+            height: 30px;
+            animation: infinite-spinning 1s linear infinite;
+            @include breakpoint(portrait) {
+                margin-top: -18px;
+                margin-left: -18px;
+                width: 36px;
+                height: 36px;
+            }
+            .svg-refresh {
+                fill: darken($grey, 20%);
+            }
+        }
+    }

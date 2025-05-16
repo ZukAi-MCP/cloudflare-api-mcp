@@ -1,0 +1,108 @@
+#get_smly_options {
+  max-width: 800px;
+  margin:auto;
+}
+
+#get_smly_options h2 {
+  text-align: center;
+  font-size: xx-large;
+}
+
+#get_smly_options h3 {
+  text-align: center;
+  font-size: larger;
+}
+
+#get_smly_options a {
+  color: blue;
+  text-decoration: underline;
+}
+
+.get_smly_section {
+  margin: 60px 0;
+}
+
+.get_smly_section_info_text {
+  margin: auto;
+}
+
+#paypal_options {
+  max-width: 800px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.paypal_option {
+  text-align: center;
+  padding: 24px;
+  width: 200px;
+  max-width:200px;
+  margin: 0;
+}
+
+table { margin: auto; }
+
+#perks_check {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 4px;
+}
+
+#get_perks_div_container {
+  display: flex;
+  justify-content:center;
+}
+
+#get_perks_div {
+  display:flex;
+}
+
+.donate_form_info {
+  display: none;
+}
+
+.patreon_line {
+  margin: auto;
+  text-align: center;
+}
+
+.send__btn {
+  @extend .csbtn;
+  @include breakpoint(portrait) {
+      font-size: 26px;
+      border-radius: 3px;
+  }
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.send__btn--validating {
+  @extend .csbtn-base;
+  position: relative;
+  background-color: $grey;
+  transform: translate(0px, 3px);
+  box-shadow: 0 0px 0 0;
+  height: 60px;
+  @include breakpoint(portrait) {
+      height: 72px;
+  }
+  ._icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -15px;
+      margin-left: -15px;
+      width: 30px;
+      height: 30px;
+      animation: infinite-spinning 1s linear infinite;
+      @include breakpoint(portrait) {
+          margin-top: -18px;
+          margin-left: -18px;
+          width: 36px;
+          height: 36px;
+      }
+      .svg-refresh {
+          fill: darken($grey, 20%);
+      }
+  }
+}

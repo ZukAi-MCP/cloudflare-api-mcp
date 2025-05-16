@@ -1,0 +1,145 @@
+.vote_info {
+  border: 1px solid #bbb;
+  padding: 10px;
+  margin-bottom: 10px;
+  .break { line-break: anywhere; }
+  code { display: block; }
+}
+
+.vote__field {
+
+  position: relative;
+
+  margin-bottom: 20px;
+  @include breakpoint(portrait) {
+    margin-bottom: 40px;
+  }
+
+  ._label {
+    @include noselect;
+    cursor: pointer;
+    display: block;
+
+    @include breakpoint(portrait) {
+      font-size: 20px;
+      margin-top: 0px;
+    }
+  }
+
+  ._currency {
+    @include noselect;
+    @extend .jigsaw-light;
+    position: absolute;
+    z-index: 500;
+    cursor: pointer;
+    display: block;
+    text-align: right;
+    font-size: 18px;
+    right: 10px;
+    top: 36px;
+    opacity: 0.4;
+
+    @include breakpoint(portrait) {
+      top: 14px;
+    }
+
+    select {
+      @extend .jigsaw-light;
+      font-size: 18px;
+      border: none;
+      background-color: transparent;
+
+      &:focus {
+        outline: none;
+      }
+
+      @include breakpoint(portrait) {
+        font-size: 24px;
+      }
+    }
+
+    &.dropdown {
+      top: 30px;
+      right: 10px;
+      width: 100%;
+      padding-left: 20px;
+      @include breakpoint(portrait) {
+        top: 36px;
+      }
+    }
+
+    @include breakpoint(portrait) {
+      font-size: 24px;
+    }
+  }
+
+  ._currency--error {
+    @include noselect;
+    @extend .jigsaw-light;
+    position: absolute;
+    z-index: 500;
+    cursor: pointer;
+    display: block;
+    text-align: right;
+    font-size: 18px;
+    right: 10px;
+    top: 9px;
+    opacity: 0.4;
+
+    select {
+      @extend .jigsaw-light;
+      padding-right: 20px;
+      font-size: 18px;
+      border: none;
+      background-color: transparent;
+
+      &:focus {
+        outline: none;
+      }
+
+    }
+
+    &.dropdown {
+      top: 4px;
+      right: 3px;
+    }
+  }
+
+  ._input {
+    @extend .generic_box;
+    @extend .jigsaw-light;
+    padding-left: 10px;
+    padding-right: 50px;
+    height: auto;
+    margin: 0;
+    border-radius: 0;
+    border-top-right-radius: 2px;
+    border-top-left-radius: 2px;
+    position: relative;
+    z-index: 200;
+
+    &:active, &:focus {
+      outline: 0;
+      border: 1px solid #999;
+    }
+    &.fiat {
+      padding-right: 70px;
+    }
+
+    @include breakpoint(portrait) {
+      font-size: 26px;
+      border-radius: 3px;
+      padding-right: 60px;
+      &.fiat {
+        padding-right: 90px;
+      }
+    }
+  }
+
+  ._error {
+    background-color: lighten(red, 40%);
+    border: 1px solid red;
+  }
+
+}
+
