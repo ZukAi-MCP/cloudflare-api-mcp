@@ -1,0 +1,41 @@
+<h2 class="_subtitle">{{translate("Your passphrase")}}</h2>
+<p class="_passphrase">{{passphrase}}</p>
+
+
+<p class="passphrase__warning">{{translate("Your passphrase will not be shown again.")}}<br />
+  {{translate("Without it you will lose access to your wallet.")}}</p>
+<div class="passphrase__accept" on-click="toggle-check">
+  <div id="check" class="_checkbox">
+    {{#checked}}
+      <div id="check" class="_check"></div>
+    {{/checked}}
+  </div>
+
+  <p class="_checktext">{{translate("I have written down or otherwise securely stored my passphrase")}}</p>
+</div>
+
+<div class="passphrase__accept" on-click="toggle-faucet-check">
+  <div id="check" class="_checkbox">
+    {{#faucetChecked}}
+      <div id="check" class="_check"></div>
+    {{/faucetChecked}}
+  </div>
+
+  <p class="_checktext">I want to receive complimentary smileys when wallet is created. (You will have to wait a few seconds)</p>
+</div>
+
+<div class="passphrase__accept" on-click="toggle-terms-check">
+  <div id="check" class="_checkbox">
+    {{#termsChecked}}
+      <div id="check" class="_check"></div>
+    {{/termsChecked}}
+  </div>
+
+  <p class="_checktext">{{translate("I Agree To The Terms & Conditions")}}</p>
+</div>
+
+<div class="about__section">
+  <a class="about__listitem" onclick="window.open('https://www.coin.space/coinprivacypolicy.html', '_system'); return false;" href="">
+    <div class="about__listitem-title">{{translate("Terms of Use")}}</div>
+  </a>
+</div>
